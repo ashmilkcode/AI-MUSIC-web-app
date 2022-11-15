@@ -1,0 +1,25 @@
+.NOTE
+{
+    font-size: 20px;
+    color:black;
+}
+
+.appHeading{
+    margin: 0;
+    width: 100%;
+    font-size: 30px;
+}
+
+body{
+    background-size: cover;
+}
+
+#songname{
+    font-size: 30px;
+    margin: 17px;
+}
+
+canvas{
+    border: 5px solid white;
+    border-radius: 15px;
+}
