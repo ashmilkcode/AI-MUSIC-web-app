@@ -1,4 +1,5 @@
-song = "";
+song1 = "";
+song2 = "";
 leftWristX = 0;
 leftWristY = 0;
 
@@ -10,8 +11,8 @@ scoreLeftWrist = 0;
 
 function preload()
 {
-    song1 = loadSound("581799_Remix--Super-Mario-Bros.mp3");
-    song2 = loadSound("Never Gonna Give You Up Original.mp3");
+    song1 = loadSound("SuperMario.mp3");
+    song2 = loadSound("Rickroll.mp3");
 } 
 
 function setup(){
@@ -48,8 +49,24 @@ function draw() {
     fill("#2596be");
     stroke("#2596be");
 
-    if (scoreLeftWrist > 0.2) {
+    if (scoreLeftWrist < 0.2) {
         circle(leftWristX, leftWristY, 20);
-        
+        playSong1
+    }
+    if (scoreRightWrist < 0.2) {
+        circle(leftWristX, leftWristY, 20);
+        playSong2
     }
 } 
+
+function playSong1() {
+    song1.play()
+    song1.setVolume(1);
+    song1.rate(1);
+}
+
+function playSong2() {
+    song2.play()
+    song2.setVolume(1);
+    song2.rate(1);
+}
